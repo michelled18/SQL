@@ -1,0 +1,33 @@
+--Create clothing store database
+
+CREATE TABLE clothing_item (item_id INTEGER, item_type TEXT, item_color TEXT, item_price INTEGER, item_manufacturer TEXT, item_quantity INTEGER);
+
+Insert into clothing_item values (1, "dress", "purple", 13, "stitch coll", 16);
+insert into clothing_item values(2, "shorts", "blue", 15, "nora man",27);
+insert into clothing_item values(3, "tank top", "pink", 10, "district coll", 10);
+insert into clothing_item values(4, "blouse", "white", 25, "don adelle", 35);
+insert into clothing_item values(5, "leggings", "black", 11, "logos fash", 27);
+insert into clothing_item values(6, "skirt", "khaki", 15, "stitch coll", 32);
+insert into clothing_item values(7, "socks", "striped", 7, "nora man", 44);
+insert into clothing_item values(8, "sweat pants", "yellow", 18, "district coll", 34);
+insert into clothing_item values(9, "hoodie", "olive green", 30, "don adelle", 29);
+insert into clothing_item values(10, "bra", "nude", 12, "logos fash", 31);
+insert into clothing_item values(11, "jeans", "black", 16, "stitch coll", 33);
+insert into clothing_item values(12, "midi dress", "mustard", 19, "nora man", 23);
+insert into clothing_item values(13, "maxi skirt", "floral", 20, "district coll", 43);
+insert into clothing_item values(14, "under wear", "beige", 7, "don adelle", 44);
+insert into clothing_item values(15, "maxi dress", "teal", 18, "logos fash",32);
+
+--display items by price from lowest to hight
+SELECT *
+FROM clothing_item 
+ORDER BY item_price ASC;
+
+--display items from on the manufacturer district coll
+SELECT * 
+FROM clothing_item 
+WHERE item_manufacturer = "district coll";
+
+--display number of all the items
+SELECT SUM(item_quantity) 
+FROM clothing_item
